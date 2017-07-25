@@ -1,6 +1,8 @@
 *.o
 *.a
 *.d
+*.raw
+*.out
 *.swp
 *_cl.cpp
 *.buildflags
