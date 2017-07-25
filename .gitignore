@@ -1,6 +1,7 @@
 *.o
 *.a
 *.d
+*.swp
 *_cl.cpp
 *.buildflags
 *Makefile
