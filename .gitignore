@@ -43,7 +43,6 @@ src/opencl/level1/bfs/BFS
 src/opencl/level1/fft/FFT
 src/opencl/level1/gemm/GEMM
 src/opencl/level1/stencil2d/.Stencil2Dmain.cpp.swp
-src/opencl/level1/stencil2d/benchmark.sh
 src/opencl/level1/stencil2d/test.xml
 src/opencl/level1/md/MD
 src/opencl/level1/md5hash/MD5Hash
