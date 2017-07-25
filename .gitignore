@@ -19,6 +19,7 @@ ipch
 bin
 libexec
 share
+configure
 
 # Ignore some generated files for in-place build
 .deps
@@ -28,3 +29,17 @@ config/stamp-h1
 tools/buildFlags.txt
 tools/compilerVersion.txt
 tools/shocdriver
+
+src/opencl/level0/BusSpeedDownload
+src/opencl/level0/BusSpeedReadback
+src/opencl/level0/DeviceMemory
+src/opencl/level0/KernelCompile
+src/opencl/level0/MaxFlops
+src/opencl/level0/QueueDelay
+src/opencl/level1/bfs/BFS
+src/opencl/level1/fft/FFT
+src/opencl/level1/gemm/GEMM
+src/opencl/level1/stencil2d/.Stencil2Dmain.cpp.swp
+src/opencl/level1/stencil2d/benchmark.sh
+src/opencl/level1/stencil2d/test.xml
+
