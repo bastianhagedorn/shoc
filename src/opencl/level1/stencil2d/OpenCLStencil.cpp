@@ -17,6 +17,11 @@ OpenCLStencil<T>::OpenCLStencil(T wCenter, T wCardinal, T wDiagonal, size_t _lRo
       context(_ctx), queue(_queue) {
 	// determine our value type (as a string)
 	std::string precision;
+
+	unsigned max_compute_units;
+	clGetDeviceInfo(device, CL_DEVICE_MAX_COMPUTE_UNITS, sizeof(unsigned), &max_compute_units,
+			NULL);
+	std::cout << "CL_DEVICE_MAX_COMPUTE_UNITS: " << max_compute_units << std::endl;
 #if READY
 // use RTTI to determine type?
 #else
