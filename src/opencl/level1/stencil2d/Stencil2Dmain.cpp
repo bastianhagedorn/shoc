@@ -316,7 +316,8 @@ void RunBenchmark(cl_device_id dev, cl_context ctx, cl_command_queue queue,
 		}
 #endif // defined(PARALLEL)
 		DoTest<double>("DP_Sten2D", dev, ctx, queue, resultDB, op, "-DK_DOUBLE_PRECISION");
-	} else if (checkExtension(dev, "cl_amd_fp64")) {
+	//} else if (checkExtension(dev, "cl_amd_fp64")) {
+	} else if (false) {
 #if defined(PARALLEL)
 		MPI_Comm_rank(MPI_COMM_WORLD, &cwrank);
 		if (cwrank == 0) {
