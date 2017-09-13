@@ -289,14 +289,14 @@ template <class T> void OpenCLStencil<T>::operator()(Matrix2D<T> &mtx, unsigned 
                 CL_CHECK_ERROR(clErr);
 
                 if (iter == nIters - 1) {
-                        long elapsed = 0;
+                        unsigned long long elapsed = 0;
                         cl_ulong time_start, time_end;
                         clWaitForEvents(1, &mainKernelEvt);
                         clGetEventProfilingInfo(mainKernelEvt, CL_PROFILING_COMMAND_START,
                                                 sizeof(time_start), &time_start, NULL);
                         clGetEventProfilingInfo(mainKernelEvt, CL_PROFILING_COMMAND_END,
                                                 sizeof(time_end), &time_end, NULL);
-                        elapsed += (time_end - time_start);
+                        elapsed = (time_end - time_start);
                         std::cout << "[DEBUG] kernel runtime:: " << elapsed << std::endl;
                         // last iteration - put the event in the dependency list
                         // to be used by the read buffer command
